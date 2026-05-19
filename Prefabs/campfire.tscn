@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://707hj01b8uvf"]
+
+[ext_resource type="Texture2D" uid="uid://b3etfpwc2vhkx" path="res://Assets/Pixel_Crawler-Free_Pack/Environment/Structures/Stations/Bonfire/Bonfire_01-Sheet.png" id="1_hmdec"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fdugj"]
+atlas = ExtResource("1_hmdec")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_41ksd"]
+atlas = ExtResource("1_hmdec")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ytjom"]
+atlas = ExtResource("1_hmdec")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qd4yg"]
+atlas = ExtResource("1_hmdec")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mkh8f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fdugj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_41ksd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ytjom")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qd4yg")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[node name="Campfire" type="Node2D" unique_id=297654510]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1469104628]
+position = Vector2(0, 13)
+sprite_frames = SubResource("SpriteFrames_mkh8f")
+animation = &"new_animation"
+frame_progress = 0.15908349
