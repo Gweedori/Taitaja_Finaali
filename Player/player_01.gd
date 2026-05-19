@@ -37,6 +37,12 @@ func _physics_process(delta: float) -> void:
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("input_interact"):
-		print("try interact")
-		print(interact_area.get_overlapping_areas())
-		interact_area.get_overlapping_areas()
+		if not interact_area.get_overlapping_areas().is_empty():
+			var overlapArea = interact_area.get_overlapping_areas()[0]
+			if overlapArea.name == "TaskArea":
+				var taskInfo = overlapArea._getTaskInfo()
+				var taskZone = taskInfo[0]
+				var taskPriority = taskInfo[1]
+				var taskCoop = taskInfo[2]
+				print(taskInfo)
+				
