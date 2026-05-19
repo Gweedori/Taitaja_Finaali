@@ -3,11 +3,34 @@
 [ext_resource type="Script" uid="uid://thew0ktvjh72" path="res://Prefabs/trash/trash.gd" id="1_htlip"]
 [ext_resource type="PackedScene" uid="uid://bqwsa0ioycgy5" path="res://Prefabs/trash/draggable_sprite.tscn" id="2_htlip"]
 [ext_resource type="Script" uid="uid://boyvunvkvw264" path="res://Prefabs/trash/draggable_sprite.gd" id="3_ekd28"]
+[ext_resource type="Texture2D" uid="uid://meeyrxaavaqr" path="res://icon.svg" id="4_ekd28"]
+[ext_resource type="Script" uid="uid://bq4l6530beaeq" path="res://Prefabs/trash/trash_can.gd" id="4_gadqu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gadqu"]
+size = Vector2(256, 256)
 
 [node name="TrashGame" type="Node2D" unique_id=1345923232]
 script = ExtResource("1_htlip")
 
-[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=750844952]
-
 [node name="DraggableSprite" parent="." unique_id=749188286 instance=ExtResource("2_htlip")]
+position = Vector2(808, 216)
 script = ExtResource("3_ekd28")
+
+[node name="Trashcan" type="Sprite2D" parent="." unique_id=1502514050]
+
+[node name="TrashCan" type="Node2D" parent="." unique_id=467432376]
+script = ExtResource("4_gadqu")
+
+[node name="Sprite2D" type="Sprite2D" parent="TrashCan" unique_id=1534163900]
+position = Vector2(152, 326)
+scale = Vector2(2, 2)
+texture = ExtResource("4_ekd28")
+
+[node name="Area2D" type="Area2D" parent="TrashCan" unique_id=425679887]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TrashCan/Area2D" unique_id=125630323]
+position = Vector2(152, 326)
+shape = SubResource("RectangleShape2D_gadqu")
+
+[connection signal="mouse_entered" from="TrashCan/Area2D" to="TrashCan" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="TrashCan/Area2D" to="TrashCan" method="_on_area_2d_mouse_exited"]
