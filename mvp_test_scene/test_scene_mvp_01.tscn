@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bm5cayyu5755m"]
+
+[ext_resource type="Texture2D" uid="uid://meeyrxaavaqr" path="res://icon.svg" id="1_cn6ts"]
+[ext_resource type="PackedScene" uid="uid://dco2xqwgcmm6q" path="res://Player/player_01.tscn" id="2_mwlmt"]
+[ext_resource type="PackedScene" uid="uid://capy21yxb7n62" path="res://mvp_test_scene/test_task01.tscn" id="3_mwlmt"]
+
+[node name="TestScene01" type="Node2D" unique_id=1868824818]
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1243859001]
+scale = Vector2(10, 10)
+texture = ExtResource("1_cn6ts")
+
+[node name="Player01" parent="." unique_id=1786162049 instance=ExtResource("2_mwlmt")]
+position = Vector2(-32, 0)
+
+[node name="TestTask" parent="." unique_id=481161883 instance=ExtResource("3_mwlmt")]
+position = Vector2(-13, -87)

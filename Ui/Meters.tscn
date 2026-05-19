@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://bsow6xl0dd5yk"]
+
+[node name="AreaMeters" type="Control" unique_id=348987959]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=1802861700]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -129.0
+offset_right = 132.0
+offset_bottom = 141.0
+grow_horizontal = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=1258607309]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -119.5
+offset_top = -60.0
+offset_right = 119.5
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="ForestConatiner" type="HBoxContainer" parent="Panel/VBoxContainer" unique_id=1097148980]
+layout_mode = 2
+
+[node name="ForestLable" type="Label" parent="Panel/VBoxContainer/ForestConatiner" unique_id=199696640]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Forest health"
+
+[node name="ForestBar" type="ProgressBar" parent="Panel/VBoxContainer/ForestConatiner" unique_id=928783625]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CampContainer" type="HBoxContainer" parent="Panel/VBoxContainer" unique_id=1848064080]
+layout_mode = 2
+
+[node name="CampLable" type="Label" parent="Panel/VBoxContainer/CampContainer" unique_id=1415789454]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Camp site"
+
+[node name="CampBar" type="ProgressBar" parent="Panel/VBoxContainer/CampContainer" unique_id=1895981030]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="TrailContainer" type="HBoxContainer" parent="Panel/VBoxContainer" unique_id=154064891]
+layout_mode = 2
+
+[node name="TrailLabel" type="Label" parent="Panel/VBoxContainer/TrailContainer" unique_id=567149718]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Hiking trail"
+
+[node name="TailBar" type="ProgressBar" parent="Panel/VBoxContainer/TrailContainer" unique_id=1526522697]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+
+[node name="MeadowContainer" type="HBoxContainer" parent="Panel/VBoxContainer" unique_id=2097739139]
+layout_mode = 2
+
+[node name="MeadowLabel" type="Label" parent="Panel/VBoxContainer/MeadowContainer" unique_id=1941700231]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Meadow"
+
+[node name="MeadowBar" type="ProgressBar" parent="Panel/VBoxContainer/MeadowContainer" unique_id=1658998886]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 3
