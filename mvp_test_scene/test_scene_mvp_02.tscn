@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://ngpv2qo8jm7d"]
+
+[ext_resource type="Script" uid="uid://dvv0cys6gqehl" path="res://mvp_test_scene/SplitScreen.gd" id="1_0g6c8"]
+[ext_resource type="PackedScene" uid="uid://bm5cayyu5755m" path="res://mvp_test_scene/test_scene_mvp_01.tscn" id="1_gbtpl"]
+[ext_resource type="PackedScene" uid="uid://bogtrmnh4lu1s" path="res://Player/player_02.tscn" id="3_1mkob"]
+
+[node name="Control" type="Control" unique_id=1661898967]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0g6c8")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1669098241]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LeftSubViewportContainer" type="SubViewportContainer" parent="HBoxContainer" unique_id=668182591]
+layout_mode = 2
+size_flags_horizontal = 3
+stretch = true
+
+[node name="LeftSubViewport" type="SubViewport" parent="HBoxContainer/LeftSubViewportContainer" unique_id=1108744773]
+handle_input_locally = false
+size = Vector2i(574, 648)
+render_target_update_mode = 4
+
+[node name="TestScene01" parent="HBoxContainer/LeftSubViewportContainer/LeftSubViewport" unique_id=1868824818 instance=ExtResource("1_gbtpl")]
+
+[node name="RightSubViewportContainer" type="SubViewportContainer" parent="HBoxContainer" unique_id=76144784]
+layout_mode = 2
+size_flags_horizontal = 3
+stretch = true
+
+[node name="RightSubViewport" type="SubViewport" parent="HBoxContainer/RightSubViewportContainer" unique_id=1455983664]
+handle_input_locally = false
+size = Vector2i(574, 648)
+render_target_update_mode = 4
+
+[node name="Player_02" parent="HBoxContainer/RightSubViewportContainer/RightSubViewport" unique_id=181075912 instance=ExtResource("3_1mkob")]
+player = 2

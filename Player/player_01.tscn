@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dco2xqwgcmm6q"]
+
+[ext_resource type="Script" uid="uid://cpy0fr0y4trtb" path="res://Player/player_01.gd" id="1_lp4j5"]
+[ext_resource type="Texture2D" uid="uid://meeyrxaavaqr" path="res://icon.svg" id="2_xagy1"]
+
+[node name="Player01" type="CharacterBody2D" unique_id=1786162049]
+script = ExtResource("1_lp4j5")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1942383385]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_xagy1")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1284277093]
