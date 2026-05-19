@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+@onready var interact_area: Area2D = $InteractArea
+
 @export var player = 1
 @export var speed = 150.0
 
@@ -32,3 +34,9 @@ func _physics_process(delta: float) -> void:
 		velocity.y = move_toward(velocity.y, 0, speed * delta * 100.0)
 
 	move_and_slide()
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("input_interact"):
+		print("try interact")
+		print(interact_area.get_overlapping_areas())
+		interact_area.get_overlapping_areas()
