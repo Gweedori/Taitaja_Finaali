@@ -5,13 +5,20 @@ extends CharacterBody2D
 @onready var label: Label = $Label
 
 @export var player = 1
-@export var speed = 150.0
+@export var speed = 50.0
 
 @onready var device = 0
+
+@onready var playersprite: AnimatedSprite2D = $PlayerSprite
 
 var taskStarted = false
 var points = 0
 var playerLock = false
+
+var previouswalky = 1
+var previouswalkx = 1
+var previouswalk = "X1"
+var soundlocked = false
 
 func _ready() -> void:
 	taskMinigame.hide()
@@ -41,6 +48,7 @@ func _physics_process(delta: float) -> void:
 		velocity.y = move_toward(velocity.y, 0, speed * delta * 100.0)
 		
 	if playerLock == false:
+		animationengine(directionY, directionX)
 		move_and_slide()
 
 func _input(event: InputEvent) -> void:
@@ -103,3 +111,39 @@ func _input(event: InputEvent) -> void:
 					playerLock = true
 					taskMinigame.show()
 		
+func animationengine(DirY, DirX):
+	if DirX > 0.3:
+		playersprite.flip_h = true
+		playersprite.play("side_walk")
+		previouswalk = "X1"
+		soundengine()
+	elif DirX < -0.3:
+		playersprite.flip_h = false
+		playersprite.play("side_walk")
+		previouswalk = "X-1"
+		soundengine()
+	elif DirX == 0 and DirY == 0 and previouswalk == "X1":
+		playersprite.play("side_idle")
+	elif DirX == 0 and DirY == 0 and previouswalk == "X-1":
+		playersprite.play("side_idle")
+	elif DirY > 0.3:
+		playersprite.play("down_walk")
+		previouswalk = "Y1"
+		soundengine()
+	elif DirY < -0.3:
+		playersprite.play("up_walk")
+		previouswalk = "Y-1"
+		soundengine()
+	elif DirY == 0  and DirX == 0 and previouswalk == "Y1":
+		playersprite.play("down_idle")
+	elif DirY == 0 and DirX == 0 and previouswalk == "Y-1":
+		playersprite.play("up_idle")
+
+func soundengine():
+	if !soundlocked:
+		soundlocked = true
+		AudioManager.foot_step_grass.play()
+		await get_tree().create_timer(0.6).timeout
+		soundlocked = false
+	else:
+		pass

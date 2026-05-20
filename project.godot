@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Taitaja_Finaali"
-run/main_scene="uid://cnu1d5r77ldjt"
+run/main_scene="uid://r4kja8hx0lxl"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
