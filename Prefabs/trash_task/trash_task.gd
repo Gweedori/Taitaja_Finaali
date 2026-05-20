@@ -16,7 +16,7 @@ func _process(delta: float) -> void:
 func task_done():
 	trash_task.hide()
 	#task_area.queue_free() #Currently causes lack of area data for 2nd completing player.
-	await get_tree().create_timer(randf_range(160, 320)).timeout
+	await get_tree().create_timer(randf_range(60, 160)).timeout
 	taskmanager.spawn_trash_task()
 	queue_free()
 	$Exclamation.hide()
