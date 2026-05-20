@@ -6,12 +6,12 @@
 [ext_resource type="PackedScene" uid="uid://chr4td6rxbbku" path="res://Map/tree_03.tscn" id="3_otb8d"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_1bic8"]
+resource_name = "TreeScenes"
 scenes/1/scene = ExtResource("1_iiibm")
 scenes/1/display_placeholder = true
 scenes/2/scene = ExtResource("2_ira8r")
 scenes/2/display_placeholder = true
 scenes/3/scene = ExtResource("3_otb8d")
-scenes/3/display_placeholder = true
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ira8r"]
 texture = ExtResource("2_nusq0")
