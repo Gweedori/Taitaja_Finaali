@@ -3,6 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://dwj1i0mu7wd2" path="res://Assets/Pixel_Crawler-Free_Pack/Environment/Props/Static/Trees/Model_01/Size_05.png" id="1_em2y8"]
 [ext_resource type="Script" uid="uid://d3cbgbhuaf2es" path="res://Map/tree.gd" id="1_fdigy"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fdigy"]
+size = Vector2(62, 20)
+
 [node name="Tree" type="Node2D" unique_id=666427348]
 script = ExtResource("1_fdigy")
 
@@ -11,3 +14,11 @@ position = Vector2(1, -76)
 texture = ExtResource("1_em2y8")
 region_enabled = true
 region_rect = Rect2(112, 160, 112, 160)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=535974909]
+collision_layer = 128
+collision_mask = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1775099400]
+position = Vector2(-1, -9)
+shape = SubResource("RectangleShape2D_fdigy")
