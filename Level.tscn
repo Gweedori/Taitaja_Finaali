@@ -81,6 +81,15 @@ shape = SubResource("RectangleShape2D_3ywx5")
 position = Vector2(930, -636)
 shape = SubResource("RectangleShape2D_ofirr")
 
+[node name="FlowerMeadow" parent="Area2D" unique_id=1827121484 instance=ExtResource("8_4eo0i")]
+position = Vector2(2529, 27)
+
+[node name="FlowerMeadow2" parent="Area2D" unique_id=667909311 instance=ExtResource("8_4eo0i")]
+position = Vector2(2433, -216)
+
+[node name="FlowerMeadow3" parent="Area2D" unique_id=1051819789 instance=ExtResource("8_4eo0i")]
+position = Vector2(2433, -456)
+
 [node name="TaskManager" type="Node2D" parent="." unique_id=2121627147]
 position = Vector2(-819, -6)
 script = ExtResource("9_86ljf")
@@ -90,15 +99,6 @@ position = Vector2(984, 6)
 
 [node name="naturepath_task_pos" type="Marker2D" parent="TaskManager" unique_id=1179084131]
 position = Vector2(-680, -212)
-
-[node name="NestingboxTask" parent="TaskManager" unique_id=1920746697 instance=ExtResource("4_86ljf")]
-position = Vector2(191, -452)
-
-[node name="NestingboxTask2" parent="TaskManager" unique_id=1410686193 instance=ExtResource("4_86ljf")]
-position = Vector2(895, -261)
-
-[node name="NestingboxTask3" parent="TaskManager" unique_id=377261853 instance=ExtResource("4_86ljf")]
-position = Vector2(616, 357)
 
 [node name="Player01" parent="." unique_id=1786162049 instance=ExtResource("4_wkftn")]
 position = Vector2(-90, -26)
@@ -166,5 +166,11 @@ script = ExtResource("6_4eo0i")
 [node name="TaskArea" parent="TestTasksd9" unique_id=404038392 instance=ExtResource("7_86ljf")]
 zone = 3
 
-[node name="FlowerMeadow" parent="." unique_id=1827121484 instance=ExtResource("8_4eo0i")]
-position = Vector2(1493, -274)
+[node name="FlowerMeadow" parent="." unique_id=219273406 instance=ExtResource("8_4eo0i")]
+position = Vector2(1358, -315)
+
+[node name="NestingboxTask" parent="." unique_id=1920746697 instance=ExtResource("4_86ljf")]
+position = Vector2(-131, -274)
+
+[node name="NestingboxTask2" parent="." unique_id=515229285 instance=ExtResource("4_86ljf")]
+position = Vector2(725, 236)

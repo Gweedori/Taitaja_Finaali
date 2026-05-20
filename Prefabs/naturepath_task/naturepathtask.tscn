@@ -436,7 +436,7 @@ tile_set = SubResource("TileSet_7el4c")
 [node name="TaskArea" parent="." unique_id=1144284543 instance=ExtResource("6_xwrfx")]
 position = Vector2(0, 12)
 scale = Vector2(2, 2)
-zone = 1
+zone = 2
 
 [node name="Exclamation" type="Node2D" parent="." unique_id=986284819]
 z_index = 1

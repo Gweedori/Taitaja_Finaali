@@ -16,7 +16,7 @@ func _process(delta: float) -> void:
 func task_done():
 	nestingbox_task.hide()
 	#task_area.queue_free() #Currently causes lack of area data for 2nd completing player.
-	await get_tree().create_timer(randf_range(200, 300)).timeout
+	await get_tree().create_timer(randf_range(20, 100)).timeout
 	taskmanager.spawn_nestingbox_task()
 	queue_free()
 	$Exclamation.hide()

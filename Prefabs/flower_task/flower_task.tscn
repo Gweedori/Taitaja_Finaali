@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cmfkr37py6qp5" path="res://tasksks/task_area.tscn" id="5_igu4s"]
 [ext_resource type="Texture2D" uid="uid://d0exyioycyo4n" path="res://Assets/Exclamationmark.png" id="6_usjk6"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ocodk"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_usjk6"]
 texture = ExtResource("2_e1irh")
 0:0/0 = 0
 1:0/0 = 0
@@ -62,7 +62,7 @@ texture = ExtResource("2_e1irh")
 0:13/0 = 0
 0:14/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cuuj4"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e5jn0"]
 texture = ExtResource("3_aobkp")
 0:0/0 = 0
 1:0/0 = 0
@@ -114,7 +114,7 @@ texture = ExtResource("3_aobkp")
 0:10/0 = 0
 1:10/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qpinj"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f7jqg"]
 texture = ExtResource("4_u752u")
 12:26/0 = 0
 11:26/0 = 0
@@ -331,9 +331,9 @@ texture = ExtResource("4_u752u")
 12:4/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_cbib1"]
-sources/0 = SubResource("TileSetAtlasSource_ocodk")
-sources/1 = SubResource("TileSetAtlasSource_cuuj4")
-sources/2 = SubResource("TileSetAtlasSource_qpinj")
+sources/0 = SubResource("TileSetAtlasSource_usjk6")
+sources/1 = SubResource("TileSetAtlasSource_e5jn0")
+sources/2 = SubResource("TileSetAtlasSource_f7jqg")
 
 [node name="FlowerMeadow" type="Node2D" unique_id=1827121484]
 script = ExtResource("1_3bnw7")
@@ -349,7 +349,7 @@ tile_set = SubResource("TileSet_cbib1")
 [node name="TaskArea" parent="." unique_id=1144284543 instance=ExtResource("5_igu4s")]
 position = Vector2(0, 12)
 scale = Vector2(4, 4)
-zone = 1
+zone = 3
 
 [node name="Exclamation" type="Node2D" parent="." unique_id=197867066]
 z_index = 1
