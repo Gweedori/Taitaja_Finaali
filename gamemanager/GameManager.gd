@@ -4,7 +4,7 @@ extends Node
 @onready var zone2Points = 0
 @onready var zone3Points = 0
 
-@onready var treeStage = 3
+@onready var treeStage = 1
 @onready var playerWaiting = false
 @onready var waitingPlayernum = 0
 @onready var playerStartedAlready = false
