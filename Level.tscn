@@ -19,6 +19,12 @@ size = Vector2(177, 2556)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ofirr"]
 size = Vector2(5484, 93)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m3clv"]
+size = Vector2(689, 545)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mxnmf"]
+size = Vector2(90, 300)
+
 [node name="Node2D" type="Node2D" unique_id=246510384]
 
 [node name="TileMapLayers" type="Node2D" parent="." unique_id=821289950]
@@ -74,6 +80,14 @@ shape = SubResource("RectangleShape2D_3ywx5")
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D" unique_id=1058228938]
 position = Vector2(936, -596)
 shape = SubResource("RectangleShape2D_ofirr")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Area2D" unique_id=4603187]
+position = Vector2(42.5, -6.5)
+shape = SubResource("RectangleShape2D_m3clv")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Area2D" unique_id=1914408594]
+position = Vector2(-347, 52)
+shape = SubResource("RectangleShape2D_mxnmf")
 
 [node name="TaskManager" type="Node2D" parent="." unique_id=2121627147]
 position = Vector2(-819, -6)
