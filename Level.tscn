@@ -2,9 +2,6 @@
 
 [ext_resource type="TileSet" uid="uid://b5fgaqbeb6oov" path="res://Map/new_tile_set.tres" id="1_2nifc"]
 [ext_resource type="PackedScene" uid="uid://dco2xqwgcmm6q" path="res://Player/player_01.tscn" id="4_wkftn"]
-[ext_resource type="PackedScene" uid="uid://capy21yxb7n62" path="res://mvp_test_scene/test_task01.tscn" id="5_mxnmf"]
-[ext_resource type="Script" uid="uid://7do16ec4kp05" path="res://mvp_test_scene/blank.gd" id="6_4eo0i"]
-[ext_resource type="PackedScene" uid="uid://cmfkr37py6qp5" path="res://tasksks/task_area.tscn" id="7_86ljf"]
 [ext_resource type="Script" uid="uid://dnpdijo6k6use" path="res://TaskManager/task_manager.gd" id="9_86ljf"]
 [ext_resource type="TileSet" uid="uid://br5rhwaq4jfm" path="res://Map/maptileset01.tres" id="12_sypgb"]
 
@@ -91,66 +88,3 @@ position = Vector2(554, 83)
 
 [node name="Player01" parent="." unique_id=1786162049 instance=ExtResource("4_wkftn")]
 position = Vector2(-90, -26)
-
-[node name="TestTasksd" parent="." unique_id=481161883 instance=ExtResource("5_mxnmf")]
-position = Vector2(-141, -97)
-script = ExtResource("6_4eo0i")
-
-[node name="TaskArea" parent="TestTasksd" unique_id=1144284543 instance=ExtResource("7_86ljf")]
-zone = 1
-
-[node name="TestTasksd2" parent="." unique_id=454832099 instance=ExtResource("5_mxnmf")]
-position = Vector2(-77, -98)
-script = ExtResource("6_4eo0i")
-
-[node name="TaskArea" parent="TestTasksd2" unique_id=1979776930 instance=ExtResource("7_86ljf")]
-zone = 1
-
-[node name="TestTasksd3" parent="." unique_id=873337589 instance=ExtResource("5_mxnmf")]
-position = Vector2(-14, -99)
-script = ExtResource("6_4eo0i")
-
-[node name="TaskArea" parent="TestTasksd3" unique_id=1355382025 instance=ExtResource("7_86ljf")]
-zone = 1
-
-[node name="TestTasksd4" parent="." unique_id=823300030 instance=ExtResource("5_mxnmf")]
-position = Vector2(-388, -139)
-script = ExtResource("6_4eo0i")
-
-[node name="TaskArea" parent="TestTasksd4" unique_id=1310372467 instance=ExtResource("7_86ljf")]
-zone = 2
-
-[node name="TestTasksd5" parent="." unique_id=978411502 instance=ExtResource("5_mxnmf")]
-position = Vector2(-324, -140)
-script = ExtResource("6_4eo0i")
-
-[node name="TaskArea" parent="TestTasksd5" unique_id=1824786738 instance=ExtResource("7_86ljf")]
-zone = 2
-
-[node name="TestTasksd6" parent="." unique_id=571585356 instance=ExtResource("5_mxnmf")]
-position = Vector2(-261, -141)
-script = ExtResource("6_4eo0i")
-
-[node name="TaskArea" parent="TestTasksd6" unique_id=1761315640 instance=ExtResource("7_86ljf")]
-zone = 2
-
-[node name="TestTasksd7" parent="." unique_id=21010322 instance=ExtResource("5_mxnmf")]
-position = Vector2(739, 100)
-script = ExtResource("6_4eo0i")
-
-[node name="TaskArea" parent="TestTasksd7" unique_id=1992096765 instance=ExtResource("7_86ljf")]
-zone = 3
-
-[node name="TestTasksd8" parent="." unique_id=2080744705 instance=ExtResource("5_mxnmf")]
-position = Vector2(803, 99)
-script = ExtResource("6_4eo0i")
-
-[node name="TaskArea" parent="TestTasksd8" unique_id=1374581070 instance=ExtResource("7_86ljf")]
-zone = 3
-
-[node name="TestTasksd9" parent="." unique_id=1723845769 instance=ExtResource("5_mxnmf")]
-position = Vector2(866, 98)
-script = ExtResource("6_4eo0i")
-
-[node name="TaskArea" parent="TestTasksd9" unique_id=404038392 instance=ExtResource("7_86ljf")]
-zone = 3
