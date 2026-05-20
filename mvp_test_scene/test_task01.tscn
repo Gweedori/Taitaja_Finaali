@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://meeyrxaavaqr" path="res://icon.svg" id="1_4pftb"]
 [ext_resource type="Script" uid="uid://dei816455nsfp" path="res://mvp_test_scene/taskscript02.gd" id="1_v2wc7"]
-[ext_resource type="Script" uid="uid://cm8ggosma0teu" path="res://mvp_test_scene/taskScript01.gd" id="2_116kc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4pftb"]
 
@@ -13,8 +12,7 @@ script = ExtResource("1_v2wc7")
 scale = Vector2(0.15, 0.15)
 texture = ExtResource("1_4pftb")
 
-[node name="TaskArea" type="Area2D" parent="." unique_id=671889453]
-script = ExtResource("2_116kc")
+[node name="TaskArea2" type="Area2D" parent="." unique_id=671889453]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TaskArea" unique_id=312841154]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TaskArea2" unique_id=312841154]
 shape = SubResource("CircleShape2D_4pftb")

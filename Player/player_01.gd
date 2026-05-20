@@ -10,6 +10,7 @@ extends CharacterBody2D
 
 var taskStarted = false
 var points = 0
+var playerLock = false
 
 func _ready() -> void:
 	taskMinigame.hide()
@@ -37,8 +38,9 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed * delta * 100.0)
 		velocity.y = move_toward(velocity.y, 0, speed * delta * 100.0)
-
-	move_and_slide()
+		
+	if playerLock == false:
+		move_and_slide()
 
 func _input(event: InputEvent) -> void:
 	var interact = "input_interact"
@@ -67,17 +69,19 @@ func _input(event: InputEvent) -> void:
 						GameManager.zone3Points = points
 				points = 0
 				taskStarted = false
+				playerLock = false
 			if overlapArea.name == "TaskArea" and taskStarted == false:
 				var taskInfo = overlapArea._getTaskInfo()
 				var taskDone = taskInfo[0]
 				var taskZone = taskInfo[1]
 				var taskPriority = taskInfo[2]
 				var taskCoop = taskInfo[3]
-				#print(taskInfo)
+				print(taskInfo)
 				if taskDone == false:
 					overlapArea.playerJoin()
 					#overlapArea.makeTaskDone()
 					taskStarted = true
 					taskMinigame.startMinigame()
+					playerLock = true
 					taskMinigame.show()
 		

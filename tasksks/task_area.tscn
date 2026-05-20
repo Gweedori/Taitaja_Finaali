@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cmfkr37py6qp5"]
+
+[ext_resource type="Script" uid="uid://cm8ggosma0teu" path="res://mvp_test_scene/taskScript01.gd" id="1_oatiu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4pftb"]
+
+[node name="TaskArea" type="Area2D" unique_id=1144284543]
+script = ExtResource("1_oatiu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=982286720]
+shape = SubResource("CircleShape2D_4pftb")
