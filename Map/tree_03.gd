@@ -21,4 +21,4 @@ func changeStage(stage):
 			sprite.region_rect.position = Vector2(0.0, 0.0)
 
 func _process(_delta: float) -> void:
-	changeStage(GameManager.treeStage)
+	changeStage(GameManager.zone1Stage)
