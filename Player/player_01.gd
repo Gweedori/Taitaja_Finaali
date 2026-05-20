@@ -71,11 +71,11 @@ func _input(event: InputEvent) -> void:
 				overlapArea.makeTaskDone()
 				match taskZone:
 					1:
-						GameManager.zone1Points += points
+						GameManager.zone1Points += points * 3
 					2:
-						GameManager.zone2Points += points
+						GameManager.zone2Points += points * 3
 					3:
-						GameManager.zone3Points += points
+						GameManager.zone3Points += points * 3
 				points = 0
 				label.hide()
 				taskStarted = false
