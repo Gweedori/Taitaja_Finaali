@@ -4,8 +4,9 @@
 [ext_resource type="Script" uid="uid://bn60m5umjky44" path="res://Prefabs/trash_task/trash_task.gd" id="1_eowk1"]
 [ext_resource type="Texture2D" uid="uid://br2tjp2jf338g" path="res://Assets/Pixel_Crawler-Free_Pack/Environment/Props/Static/Resources.png" id="2_eowk1"]
 [ext_resource type="PackedScene" uid="uid://cmfkr37py6qp5" path="res://tasksks/task_area.tscn" id="4_3vh3o"]
+[ext_resource type="Texture2D" uid="uid://d0exyioycyo4n" path="res://Assets/Exclamationmark.png" id="5_efbal"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_35ugg"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t27da"]
 texture = ExtResource("1_0npsr")
 0:0/0 = 0
 1:0/0 = 0
@@ -60,7 +61,7 @@ texture = ExtResource("1_0npsr")
 0:13/0 = 0
 0:14/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_plady"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xntdf"]
 texture = ExtResource("2_eowk1")
 0:0/0 = 0
 1:0/0 = 0
@@ -113,8 +114,8 @@ texture = ExtResource("2_eowk1")
 1:10/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_5ceqv"]
-sources/0 = SubResource("TileSetAtlasSource_35ugg")
-sources/1 = SubResource("TileSetAtlasSource_plady")
+sources/0 = SubResource("TileSetAtlasSource_t27da")
+sources/1 = SubResource("TileSetAtlasSource_xntdf")
 
 [node name="TrashTask" type="Node2D" unique_id=2126189975]
 script = ExtResource("1_eowk1")
@@ -127,3 +128,20 @@ tile_set = SubResource("TileSet_5ceqv")
 position = Vector2(0, 12)
 scale = Vector2(2, 2)
 zone = 1
+
+[node name="Exclamation" type="Node2D" parent="." unique_id=621955160]
+
+[node name="Sprite2D" type="Sprite2D" parent="Exclamation" unique_id=590240276]
+position = Vector2(2.2737368e-13, -93.99999)
+scale = Vector2(0.90625006, 0.90625006)
+texture = ExtResource("5_efbal")
+
+[node name="Label" type="Label" parent="Exclamation" unique_id=1923046425]
+offset_left = -22.0
+offset_top = -61.0
+offset_right = 26.739128
+offset_bottom = -31.5
+theme_override_font_sizes/font_size = 6
+text = "Clean 
+the trash"
+horizontal_alignment = 1
