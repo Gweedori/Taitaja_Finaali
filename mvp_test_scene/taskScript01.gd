@@ -16,4 +16,4 @@ func makeTaskDone():
 
 func playerJoin():
 	playersInTask += 1
-	print("players: ",playersInTask)
+	#print("players: ",playersInTask)

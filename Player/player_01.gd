@@ -46,7 +46,6 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed(interact):
 		if taskStarted == true:
 			taskMinigame.stopMinigame()
-			taskStarted = false
 			taskMinigame.hide()
 		if not interact_area.get_overlapping_areas().is_empty():
 			var overlapAreasArray = interact_area.get_overlapping_areas()
@@ -54,13 +53,16 @@ func _input(event: InputEvent) -> void:
 			for i in range(overlapAreasArray.size()):
 				if overlapAreasArray[i].name == "TaskArea":
 					overlapArea = overlapAreasArray[i]
+			if taskStarted == true:
+				overlapArea.makeTaskDone()
+				taskStarted = false
 			if overlapArea.name == "TaskArea" and taskStarted == false:
 				var taskInfo = overlapArea._getTaskInfo()
 				var taskDone = taskInfo[0]
 				var taskZone = taskInfo[1]
 				var taskPriority = taskInfo[2]
 				var taskCoop = taskInfo[3]
-				print(taskInfo)
+				#print(taskInfo)
 				if taskDone == false:
 					overlapArea.playerJoin()
 					#overlapArea.makeTaskDone()
