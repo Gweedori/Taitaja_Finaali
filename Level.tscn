@@ -985,3 +985,6 @@ script = ExtResource("9_86ljf")
 
 [node name="test_task_pos" type="Marker2D" parent="TaskManager" unique_id=228699558]
 position = Vector2(554, 195)
+
+[node name="trash_task_pos" type="Marker2D" parent="TaskManager" unique_id=212371319]
+position = Vector2(554, 83)
