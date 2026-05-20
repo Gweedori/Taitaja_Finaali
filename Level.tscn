@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://sh4eydvawepv"]
 
 [ext_resource type="TileSet" uid="uid://bkdby3iu33icg" path="res://Map/new_tile_set.tres" id="1_2nifc"]
+[ext_resource type="PackedScene" uid="uid://g6iju0xoti3d" path="res://Prefabs/nestingbox_task/nestingbox_task.tscn" id="4_86ljf"]
 [ext_resource type="PackedScene" uid="uid://dco2xqwgcmm6q" path="res://Player/player_01.tscn" id="4_wkftn"]
 [ext_resource type="PackedScene" uid="uid://c0f0cyrbxe4yl" path="res://tasksks/building.tscn" id="6_m3clv"]
 [ext_resource type="PackedScene" uid="uid://lvrx256scg4q" path="res://Prefabs/flower_task/flower_task.tscn" id="8_4eo0i"]
@@ -86,6 +87,12 @@ position = Vector2(2312, -248)
 
 [node name="FlowerMeadow3" parent="Area2D" unique_id=1051819789 instance=ExtResource("8_4eo0i")]
 position = Vector2(2433, -456)
+
+[node name="NestingboxTask" parent="Area2D" unique_id=1920746697 instance=ExtResource("4_86ljf")]
+position = Vector2(1510, 246)
+
+[node name="NestingboxTask2" parent="Area2D" unique_id=1308549120 instance=ExtResource("4_86ljf")]
+position = Vector2(659, -253)
 
 [node name="TaskManager" type="Node2D" parent="." unique_id=2121627147]
 position = Vector2(-819, -6)
