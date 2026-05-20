@@ -1,13 +1,17 @@
 extends CharacterBody2D
 
 @onready var interact_area: Area2D = $InteractArea
+@onready var taskMinigame: Node2D = $TaskMinigame02
 
 @export var player = 1
 @export var speed = 150.0
 
 @onready var device = 0
 
+var taskStarted = false
+
 func _ready() -> void:
+	taskMinigame.hide()
 	if player == 1:
 		device = 0
 	else:
@@ -36,13 +40,26 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("input_interact"):
+	var interact = "input_interact"
+	if player == 2:
+		interact = "p2_interact"
+	if event.is_action_pressed(interact):
+		if taskStarted == true:
+			taskMinigame.stopMinigame()
+			taskStarted = false
+			taskMinigame.hide()
 		if not interact_area.get_overlapping_areas().is_empty():
 			var overlapArea = interact_area.get_overlapping_areas()[0]
-			if overlapArea.name == "TaskArea":
+			if overlapArea.name == "TaskArea" and taskStarted == false:
 				var taskInfo = overlapArea._getTaskInfo()
-				var taskZone = taskInfo[0]
-				var taskPriority = taskInfo[1]
-				var taskCoop = taskInfo[2]
+				var taskDone = taskInfo[0]
+				var taskZone = taskInfo[1]
+				var taskPriority = taskInfo[2]
+				var taskCoop = taskInfo[3]
 				print(taskInfo)
-				
+				if taskDone == false:
+					overlapArea.makeTaskDone()
+					taskStarted = true
+					taskMinigame.startMinigame()
+					taskMinigame.show()
+		

@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://bpyhho0ekabdi"]
+
+[ext_resource type="Texture2D" uid="uid://meeyrxaavaqr" path="res://icon.svg" id="1_c34fk"]
+[ext_resource type="Script" uid="uid://sqjbcph2fie3" path="res://Ui/task_minigame_02.gd" id="1_r7tlf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h6y4h"]
+size = Vector2(3.340475, 126.512825)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_650gr"]
+size = Vector2(4.515686, 128.15384)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r7tlf"]
+size = Vector2(128, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4djfk"]
+size = Vector2(121.9047, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c34fk"]
+size = Vector2(127.99992, 127.99997)
+
+[node name="TaskMinigame02" type="Node2D" unique_id=1849091798]
+script = ExtResource("1_r7tlf")
+
+[node name="BackgroundSprite" type="Sprite2D" parent="." unique_id=639690028]
+position = Vector2(326.75003, 39)
+scale = Vector2(5.105469, 0.609375)
+texture = ExtResource("1_c34fk")
+
+[node name="LeftBody" type="StaticBody2D" parent="BackgroundSprite" unique_id=354216432]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BackgroundSprite/LeftBody" unique_id=711919451]
+position = Vector2(-62.340473, -0.89743423)
+shape = SubResource("RectangleShape2D_h6y4h")
+
+[node name="RightBody" type="StaticBody2D" parent="BackgroundSprite" unique_id=1467806313]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BackgroundSprite/RightBody" unique_id=1506879586]
+position = Vector2(61.65493, -0.07692337)
+shape = SubResource("RectangleShape2D_650gr")
+
+[node name="MehSprite" type="Sprite2D" parent="." unique_id=182066079]
+position = Vector2(319, 39)
+scale = Vector2(1, 0.609375)
+texture = ExtResource("1_c34fk")
+
+[node name="MehBody" type="StaticBody2D" parent="MehSprite" unique_id=1608026933]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MehSprite/MehBody" unique_id=1558387968]
+shape = SubResource("RectangleShape2D_r7tlf")
+
+[node name="GoodSprite" type="Sprite2D" parent="." unique_id=926179121]
+position = Vector2(318.00003, 39)
+scale = Vector2(0.328125, 0.609375)
+texture = ExtResource("1_c34fk")
+
+[node name="GoodBody" type="StaticBody2D" parent="GoodSprite" unique_id=1242913035]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GoodSprite/GoodBody" unique_id=451164046]
+position = Vector2(-6.1035156e-05, 0)
+shape = SubResource("RectangleShape2D_4djfk")
+
+[node name="NeedleSprite" type="Sprite2D" parent="." unique_id=423304476]
+position = Vector2(25.000004, 42)
+scale = Vector2(0.070312515, 1.671875)
+texture = ExtResource("1_c34fk")
+
+[node name="NeedleArea" type="Area2D" parent="NeedleSprite" unique_id=584724114]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NeedleSprite/NeedleArea" unique_id=1216352029]
+position = Vector2(0, -3.8146973e-06)
+scale = Vector2(1, 1.0000002)
+shape = SubResource("RectangleShape2D_c34fk")

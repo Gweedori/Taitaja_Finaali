@@ -14,4 +14,7 @@ texture = ExtResource("1_cn6ts")
 position = Vector2(-32, 0)
 
 [node name="TestTask" parent="." unique_id=481161883 instance=ExtResource("3_mwlmt")]
-position = Vector2(-13, -87)
+position = Vector2(-108, -110)
+
+[node name="TestTask2" parent="." unique_id=1311139151 instance=ExtResource("3_mwlmt")]
+position = Vector2(69, -107)
