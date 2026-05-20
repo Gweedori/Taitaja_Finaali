@@ -1,10 +1,11 @@
 [gd_scene format=4 uid="uid://lvrx256scg4q"]
 
-[ext_resource type="Script" uid="uid://bpkvpwkf353l2" path="res://Prefabs/flower_tas/flower_task.gd" id="1_3bnw7"]
+[ext_resource type="Script" uid="uid://bpkvpwkf353l2" path="res://Prefabs/flower_task/flower_task.gd" id="1_3bnw7"]
 [ext_resource type="Texture2D" uid="uid://b1dwu0re6susg" path="res://Assets/Pixel_Crawler-Free_Pack/Environment/Props/Static/Esoteric.png" id="2_e1irh"]
 [ext_resource type="Texture2D" uid="uid://br2tjp2jf338g" path="res://Assets/Pixel_Crawler-Free_Pack/Environment/Props/Static/Resources.png" id="3_aobkp"]
 [ext_resource type="Texture2D" uid="uid://cclgqv7hcme78" path="res://Assets/Pixel_Crawler-Free_Pack/Environment/Props/Static/Vegetation.png" id="4_u752u"]
 [ext_resource type="PackedScene" uid="uid://cmfkr37py6qp5" path="res://tasksks/task_area.tscn" id="5_igu4s"]
+[ext_resource type="Texture2D" uid="uid://d0exyioycyo4n" path="res://Assets/Exclamationmark.png" id="6_usjk6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ocodk"]
 texture = ExtResource("2_e1irh")
@@ -349,3 +350,22 @@ tile_set = SubResource("TileSet_cbib1")
 position = Vector2(0, 12)
 scale = Vector2(4, 4)
 zone = 1
+
+[node name="Exclamation" type="Node2D" parent="." unique_id=197867066]
+z_index = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Exclamation" unique_id=1197024908]
+position = Vector2(-1.4305115e-06, -119.74999)
+scale = Vector2(0.72656256, 0.72656256)
+texture = ExtResource("6_usjk6")
+
+[node name="Label" type="Label" parent="Exclamation" unique_id=232913898]
+offset_left = -85.0
+offset_top = -90.749985
+offset_right = 85.0
+offset_bottom = -53.749985
+theme_override_font_sizes/font_size = 10
+text = "Remove the invasive plants 
+and grow the flower meadow back!"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
