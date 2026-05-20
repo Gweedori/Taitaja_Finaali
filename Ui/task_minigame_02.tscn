@@ -1,72 +1,89 @@
 [gd_scene format=3 uid="uid://bpyhho0ekabdi"]
 
-[ext_resource type="Texture2D" uid="uid://meeyrxaavaqr" path="res://icon.svg" id="1_c34fk"]
 [ext_resource type="Script" uid="uid://sqjbcph2fie3" path="res://Ui/task_minigame_02.gd" id="1_r7tlf"]
+[ext_resource type="Texture2D" uid="uid://duyhg8yq07dsa" path="res://Assets/changed_assets/minigame01.png" id="2_4djfk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h6y4h"]
+atlas = ExtResource("2_4djfk")
+region = Rect2(0, 96, 128, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h6y4h"]
-size = Vector2(3.340475, 126.512825)
+size = Vector2(3.340475, 32.130398)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_650gr"]
-size = Vector2(4.515686, 128.15384)
+size = Vector2(4.515686, 30.46129)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r7tlf"]
+atlas = ExtResource("2_4djfk")
+region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r7tlf"]
-size = Vector2(128, 128)
+size = Vector2(31.238094, 30.736847)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4djfk"]
+atlas = ExtResource("2_4djfk")
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4djfk"]
-size = Vector2(121.9047, 128)
+size = Vector2(29.276588, 31.794872)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_650gr"]
+atlas = ExtResource("2_4djfk")
+region = Rect2(96, 0, 32, 80)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c34fk"]
-size = Vector2(127.99992, 127.99997)
+size = Vector2(29.619843, 80.06581)
 
 [node name="TaskMinigame02" type="Node2D" unique_id=1849091798]
 script = ExtResource("1_r7tlf")
 
 [node name="BackgroundSprite" type="Sprite2D" parent="." unique_id=639690028]
 position = Vector2(257, 39)
-scale = Vector2(4.015625, 0.609375)
-texture = ExtResource("1_c34fk")
+scale = Vector2(4.015625, 2.3964844)
+texture = SubResource("AtlasTexture_h6y4h")
 
 [node name="LeftBody" type="StaticBody2D" parent="BackgroundSprite" unique_id=354216432]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BackgroundSprite/LeftBody" unique_id=711919451]
-position = Vector2(-62.340473, -0.89743423)
+position = Vector2(-62.340473, 0.20863914)
 shape = SubResource("RectangleShape2D_h6y4h")
 
 [node name="RightBody" type="StaticBody2D" parent="BackgroundSprite" unique_id=1467806313]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BackgroundSprite/RightBody" unique_id=1506879586]
-position = Vector2(61.65493, -0.07692337)
+position = Vector2(61.65493, 0.20863914)
 shape = SubResource("RectangleShape2D_650gr")
 
 [node name="MehSprite" type="Sprite2D" parent="." unique_id=182066079]
 position = Vector2(257, 39)
-scale = Vector2(1, 0.609375)
-texture = ExtResource("1_c34fk")
+scale = Vector2(3.9374998, 2.3749998)
+texture = SubResource("AtlasTexture_r7tlf")
 
 [node name="MehBody" type="StaticBody2D" parent="MehSprite" unique_id=1608026933]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MehSprite/MehBody" unique_id=1558387968]
+position = Vector2(0.12698364, -0.2105236)
+scale = Vector2(1.0000002, 1)
 shape = SubResource("RectangleShape2D_r7tlf")
 
 [node name="GoodSprite" type="Sprite2D" parent="." unique_id=926179121]
 position = Vector2(257, 39)
-scale = Vector2(0.328125, 0.609375)
-texture = ExtResource("1_c34fk")
+scale = Vector2(1.0312504, 2.4375)
+texture = SubResource("AtlasTexture_4djfk")
 
 [node name="GoodBody" type="StaticBody2D" parent="GoodSprite" unique_id=1242913035]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GoodSprite/GoodBody" unique_id=451164046]
-position = Vector2(-6.1035156e-05, 0)
+position = Vector2(0.3404541, -0.30769253)
 shape = SubResource("RectangleShape2D_4djfk")
 
 [node name="NeedleSprite" type="Sprite2D" parent="." unique_id=423304476]
-position = Vector2(25.000004, 42)
-scale = Vector2(0.070312515, 1.671875)
-texture = ExtResource("1_c34fk")
+position = Vector2(29, 40)
+scale = Vector2(0.47265616, 1.8984375)
+texture = SubResource("AtlasTexture_650gr")
 
 [node name="NeedleArea" type="Area2D" parent="NeedleSprite" unique_id=584724114]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NeedleSprite/NeedleArea" unique_id=1216352029]
-position = Vector2(0, -3.8146973e-06)
-scale = Vector2(1, 1.0000002)
+scale = Vector2(1.0000002, 1.0000005)
 shape = SubResource("RectangleShape2D_c34fk")

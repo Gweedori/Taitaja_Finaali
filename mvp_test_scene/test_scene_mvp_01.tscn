@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://meeyrxaavaqr" path="res://icon.svg" id="1_cn6ts"]
 [ext_resource type="PackedScene" uid="uid://dco2xqwgcmm6q" path="res://Player/player_01.tscn" id="2_mwlmt"]
 [ext_resource type="PackedScene" uid="uid://capy21yxb7n62" path="res://mvp_test_scene/test_task01.tscn" id="3_mwlmt"]
+[ext_resource type="Script" uid="uid://7do16ec4kp05" path="res://mvp_test_scene/blank.gd" id="4_s2me4"]
 [ext_resource type="PackedScene" uid="uid://cmfkr37py6qp5" path="res://tasksks/task_area.tscn" id="4_xkjuc"]
 
 [node name="TestScene01" type="Node2D" unique_id=1868824818]
@@ -18,7 +19,7 @@ collision_mask = 1
 
 [node name="TestTasksd" parent="." unique_id=481161883 instance=ExtResource("3_mwlmt")]
 position = Vector2(-108, -110)
-script = null
+script = ExtResource("4_s2me4")
 
 [node name="TaskArea" parent="TestTasksd" unique_id=1144284543 instance=ExtResource("4_xkjuc")]
 zone = 1
@@ -26,7 +27,23 @@ coop = true
 
 [node name="TestTask2asd" parent="." unique_id=1311139151 instance=ExtResource("3_mwlmt")]
 position = Vector2(69, -107)
-script = null
+script = ExtResource("4_s2me4")
 
 [node name="TaskArea" parent="TestTask2asd" unique_id=1380948585 instance=ExtResource("4_xkjuc")]
 zone = 3
+
+[node name="TestTasksd2" parent="." unique_id=44949115 instance=ExtResource("3_mwlmt")]
+position = Vector2(-108, -110)
+script = ExtResource("4_s2me4")
+
+[node name="TaskArea" parent="TestTasksd2" unique_id=1694981987 instance=ExtResource("4_xkjuc")]
+zone = 1
+coop = true
+
+[node name="TestTasksd3" parent="." unique_id=600867737 instance=ExtResource("3_mwlmt")]
+position = Vector2(-108, -110)
+script = ExtResource("4_s2me4")
+
+[node name="TaskArea" parent="TestTasksd3" unique_id=2134698919 instance=ExtResource("4_xkjuc")]
+zone = 1
+coop = true
