@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://chr4td6rxbbku" path="res://Map/tree_03.tscn" id="3_otb8d"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_1bic8"]
-resource_name = "TreeScenes"
+resource_name = "Tree"
 scenes/1/scene = ExtResource("1_iiibm")
 scenes/1/display_placeholder = true
 scenes/2/scene = ExtResource("2_ira8r")

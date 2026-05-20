@@ -5,3 +5,15 @@ extends Node
 @onready var zone3Points = 0
 
 @onready var treeStage = 3
+@onready var playerWaiting = false
+@onready var waitingPlayernum = 0
+@onready var playerStartedAlready = false
+
+func waitingForOther(playerNum):
+	if waitingPlayernum == 0:
+		waitingPlayernum = playerNum
+	elif waitingPlayernum != playerNum:
+		print(waitingPlayernum)
+		print(playerNum)
+		playerStartedAlready = true
+		return true

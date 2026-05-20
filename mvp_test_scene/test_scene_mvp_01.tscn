@@ -19,9 +19,12 @@ position = Vector2(-108, -110)
 script = null
 
 [node name="TaskArea" parent="TestTasksd" unique_id=1144284543 instance=ExtResource("4_xkjuc")]
+zone = 1
+coop = true
 
 [node name="TestTask2asd" parent="." unique_id=1311139151 instance=ExtResource("3_mwlmt")]
 position = Vector2(69, -107)
 script = null
 
 [node name="TaskArea" parent="TestTask2asd" unique_id=1380948585 instance=ExtResource("4_xkjuc")]
+zone = 3

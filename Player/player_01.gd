@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @onready var interact_area: Area2D = $InteractArea
 @onready var taskMinigame: Node2D = $TaskMinigame02
+@onready var label: Label = $Label
 
 @export var player = 1
 @export var speed = 150.0
@@ -62,12 +63,13 @@ func _input(event: InputEvent) -> void:
 				overlapArea.makeTaskDone()
 				match taskZone:
 					1:
-						GameManager.zone1Points = points
+						GameManager.zone1Points += points
 					2:
-						GameManager.zone2Points = points
+						GameManager.zone2Points += points
 					3:
-						GameManager.zone3Points = points
+						GameManager.zone3Points += points
 				points = 0
+				label.hide()
 				taskStarted = false
 				playerLock = false
 			if overlapArea.name == "TaskArea" and taskStarted == false:
@@ -76,8 +78,24 @@ func _input(event: InputEvent) -> void:
 				var taskZone = taskInfo[1]
 				var taskPriority = taskInfo[2]
 				var taskCoop = taskInfo[3]
-				print(taskInfo)
-				if taskDone == false:
+				#print(taskInfo)
+				if taskCoop == true and taskDone == false:
+					label.show()
+					var startCoop = GameManager.waitingForOther(player)
+					await get_tree().create_timer(2).timeout
+					startCoop = GameManager.playerStartedAlready
+					if startCoop == true:
+						label.hide()
+						overlapArea.playerJoin()
+						#overlapArea.makeTaskDone()
+						taskStarted = true
+						taskMinigame.startMinigame()
+						playerLock = true
+						taskMinigame.show()
+					else:
+						label.hide()
+				elif taskDone == false:
+					label.hide()
 					overlapArea.playerJoin()
 					#overlapArea.makeTaskDone()
 					taskStarted = true
