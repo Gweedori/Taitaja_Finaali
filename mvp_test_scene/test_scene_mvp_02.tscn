@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ngpv2qo8jm7d"]
 
 [ext_resource type="Script" uid="uid://dvv0cys6gqehl" path="res://mvp_test_scene/SplitScreen.gd" id="1_0g6c8"]
-[ext_resource type="PackedScene" uid="uid://bm5cayyu5755m" path="res://mvp_test_scene/test_scene_mvp_01.tscn" id="1_gbtpl"]
+[ext_resource type="PackedScene" uid="uid://sh4eydvawepv" path="res://Level.tscn" id="2_xllnj"]
 [ext_resource type="PackedScene" uid="uid://dco2xqwgcmm6q" path="res://Player/player_01.tscn" id="3_1mkob"]
 [ext_resource type="PackedScene" uid="uid://bsow6xl0dd5yk" path="res://Ui/Meters.tscn" id="4_xllnj"]
 
@@ -29,10 +29,11 @@ stretch = true
 
 [node name="LeftSubViewport" type="SubViewport" parent="HBoxContainer/LeftSubViewportContainer" unique_id=1108744773]
 handle_input_locally = false
+canvas_item_default_texture_filter = 0
 size = Vector2i(574, 648)
 render_target_update_mode = 4
 
-[node name="TestScene01" parent="HBoxContainer/LeftSubViewportContainer/LeftSubViewport" unique_id=1868824818 instance=ExtResource("1_gbtpl")]
+[node name="Node2D" parent="HBoxContainer/LeftSubViewportContainer/LeftSubViewport" unique_id=246510384 instance=ExtResource("2_xllnj")]
 
 [node name="RightSubViewportContainer" type="SubViewportContainer" parent="HBoxContainer" unique_id=76144784]
 layout_mode = 2
@@ -41,6 +42,7 @@ stretch = true
 
 [node name="RightSubViewport" type="SubViewport" parent="HBoxContainer/RightSubViewportContainer" unique_id=1455983664]
 handle_input_locally = false
+canvas_item_default_texture_filter = 0
 size = Vector2i(574, 648)
 render_target_update_mode = 4
 
