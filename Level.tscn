@@ -1,11 +1,7 @@
 [gd_scene format=4 uid="uid://sh4eydvawepv"]
 
 [ext_resource type="TileSet" uid="uid://bkdby3iu33icg" path="res://Map/new_tile_set.tres" id="1_2nifc"]
-[ext_resource type="PackedScene" uid="uid://g6iju0xoti3d" path="res://Prefabs/nestingbox_task/nestingbox_task.tscn" id="4_86ljf"]
 [ext_resource type="PackedScene" uid="uid://dco2xqwgcmm6q" path="res://Player/player_01.tscn" id="4_wkftn"]
-[ext_resource type="PackedScene" uid="uid://capy21yxb7n62" path="res://mvp_test_scene/test_task01.tscn" id="5_mxnmf"]
-[ext_resource type="Script" path="res://mvp_test_scene/blank.gd" id="6_4eo0i"]
-[ext_resource type="PackedScene" uid="uid://cmfkr37py6qp5" path="res://tasksks/task_area.tscn" id="7_86ljf"]
 [ext_resource type="PackedScene" uid="uid://lvrx256scg4q" path="res://Prefabs/flower_task/flower_task.tscn" id="8_4eo0i"]
 [ext_resource type="Script" uid="uid://dnpdijo6k6use" path="res://TaskManager/task_manager.gd" id="9_86ljf"]
 [ext_resource type="TileSet" uid="uid://br5rhwaq4jfm" path="res://Map/maptileset01.tres" id="12_sypgb"]
@@ -85,7 +81,7 @@ shape = SubResource("RectangleShape2D_ofirr")
 position = Vector2(2529, 27)
 
 [node name="FlowerMeadow2" parent="Area2D" unique_id=667909311 instance=ExtResource("8_4eo0i")]
-position = Vector2(2433, -216)
+position = Vector2(2312, -248)
 
 [node name="FlowerMeadow3" parent="Area2D" unique_id=1051819789 instance=ExtResource("8_4eo0i")]
 position = Vector2(2433, -456)
