@@ -9,6 +9,7 @@ extends CharacterBody2D
 @onready var device = 0
 
 var taskStarted = false
+var points = 0
 
 func _ready() -> void:
 	taskMinigame.hide()
@@ -45,7 +46,7 @@ func _input(event: InputEvent) -> void:
 		interact = "p2_interact"
 	if event.is_action_pressed(interact):
 		if taskStarted == true:
-			taskMinigame.stopMinigame()
+			points = taskMinigame.stopMinigame()
 			taskMinigame.hide()
 		if not interact_area.get_overlapping_areas().is_empty():
 			var overlapAreasArray = interact_area.get_overlapping_areas()
@@ -54,7 +55,17 @@ func _input(event: InputEvent) -> void:
 				if overlapAreasArray[i].name == "TaskArea":
 					overlapArea = overlapAreasArray[i]
 			if taskStarted == true:
+				var taskInfo = overlapArea._getTaskInfo()
+				var taskZone = taskInfo[1]
 				overlapArea.makeTaskDone()
+				match taskZone:
+					1:
+						GameManager.zone1Points = points
+					2:
+						GameManager.zone2Points = points
+					3:
+						GameManager.zone3Points = points
+				points = 0
 				taskStarted = false
 			if overlapArea.name == "TaskArea" and taskStarted == false:
 				var taskInfo = overlapArea._getTaskInfo()

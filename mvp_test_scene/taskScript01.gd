@@ -1,11 +1,19 @@
 extends Node
 
-@export var zone = 0
-@export var priority = 0
-@export var coop = false
+@onready var test_task: Node2D = $".."
+
+@onready var zone = 0
+@onready var priority = 0
+@onready var coop = false
 
 @onready var taskDone = false
 @onready var playersInTask = 0
+
+func _ready() -> void:
+	var taskArray = test_task.taskInfoNow()
+	zone = taskArray[0]
+	priority = taskArray[1]
+	coop = taskArray[2]
 
 func _getTaskInfo():
 	return [taskDone, zone, priority, coop]

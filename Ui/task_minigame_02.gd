@@ -54,7 +54,8 @@ func stopMinigame():
 				points = 1
 			"GoodBody":
 				points = 2
-	print("Points: ",points)
+	#print("Points: ",points)
+	return points
 
 #func _input(event: InputEvent) -> void:
 	#if moveNeedle == true:
