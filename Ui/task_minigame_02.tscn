@@ -22,8 +22,8 @@ size = Vector2(127.99992, 127.99997)
 script = ExtResource("1_r7tlf")
 
 [node name="BackgroundSprite" type="Sprite2D" parent="." unique_id=639690028]
-position = Vector2(326.75003, 39)
-scale = Vector2(5.105469, 0.609375)
+position = Vector2(257, 39)
+scale = Vector2(4.015625, 0.609375)
 texture = ExtResource("1_c34fk")
 
 [node name="LeftBody" type="StaticBody2D" parent="BackgroundSprite" unique_id=354216432]
@@ -39,7 +39,7 @@ position = Vector2(61.65493, -0.07692337)
 shape = SubResource("RectangleShape2D_650gr")
 
 [node name="MehSprite" type="Sprite2D" parent="." unique_id=182066079]
-position = Vector2(319, 39)
+position = Vector2(257, 39)
 scale = Vector2(1, 0.609375)
 texture = ExtResource("1_c34fk")
 
@@ -49,7 +49,7 @@ texture = ExtResource("1_c34fk")
 shape = SubResource("RectangleShape2D_r7tlf")
 
 [node name="GoodSprite" type="Sprite2D" parent="." unique_id=926179121]
-position = Vector2(318.00003, 39)
+position = Vector2(257, 39)
 scale = Vector2(0.328125, 0.609375)
 texture = ExtResource("1_c34fk")
 

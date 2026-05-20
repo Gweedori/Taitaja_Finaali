@@ -1,5 +1,6 @@
 extends Node2D
 
+@onready var rootNode: Node2D = $"."
 @onready var needle_sprite: Sprite2D = $NeedleSprite
 @onready var meh_sprite: Sprite2D = $MehSprite
 @onready var good_sprite: Sprite2D = $GoodSprite
@@ -16,6 +17,7 @@ var points = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	#print(rootNode)
 	pass
 
 
@@ -26,12 +28,13 @@ func _process(delta: float) -> void:
 		if needle_area.get_overlapping_bodies():
 			var overlapBody = needle_area.get_overlapping_bodies()[-1]
 			var bodyName = overlapBody.name
-			#print(overlapBody)
-			match bodyName:
-				"RightBody":
-					direction = -1
-				"LeftBody":
-					direction = 1
+			if rootNode == overlapBody.find_parent("TaskMinigame02"):
+				#print("lasjhdlkasjdljaslkjdkl")
+				match bodyName:
+					"RightBody":
+						direction = -1
+					"LeftBody":
+						direction = 1
 			
 		needle_sprite.position.x += speed * delta * direction
 		

@@ -23,4 +23,4 @@ shape = SubResource("CircleShape2D_xagy1")
 
 [node name="TaskMinigame02" parent="." unique_id=1849091798 instance=ExtResource("3_ccih5")]
 visible = false
-position = Vector2(-318, -129)
+position = Vector2(-257, -129)
