@@ -4,10 +4,12 @@ extends Node2D
 @onready var test_task_pos: Marker2D = $test_task_pos
 @onready var trash_task_pos: Marker2D = $trash_task_pos
 @onready var flower_task_pos: Marker2D = $flower_task_pos
+@onready var naturepath_task_pos: Marker2D = $naturepath_task_pos
 
 const TEST_TASK = preload("uid://bgj4yn7rnrpaf")
 const TRASH_TASK = preload("uid://b6g18beb3fl2y")
 const FLOWER_TASK = preload("uid://lvrx256scg4q")
+const NATUREPATH_TASK = preload("uid://dimftpdsd0kux")
 
 
 
@@ -36,3 +38,8 @@ func spawn_flower_task():
 	var flower_task = FLOWER_TASK.instantiate()
 	flower_task.global_position = flower_task_pos.global_position
 	task_manager.add_child.call_deferred(flower_task)
+
+func spawn_naturepath_task():
+	var naturepath_task = NATUREPATH_TASK.instantiate()
+	naturepath_task.global_position = naturepath_task_pos.global_position
+	task_manager.add_child.call_deferred(naturepath_task)
