@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" format=3 uid="uid://b5fgaqbeb6oov"]
+[gd_resource type="TileSet" format=3 uid="uid://bkdby3iu33icg"]
 
 [ext_resource type="Texture2D" uid="uid://c8txvnuq0k4r5" path="res://Assets/Pixel_Crawler-Free_Pack/Environment/Tilesets/Floors_Tiles.png" id="1_6esau"]
 [ext_resource type="PackedScene" uid="uid://dng7cbhy1k6uc" path="res://Map/tree.tscn" id="2_gtkca"]
