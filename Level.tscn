@@ -2,6 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://bkdby3iu33icg" path="res://Map/new_tile_set.tres" id="1_2nifc"]
 [ext_resource type="PackedScene" uid="uid://dco2xqwgcmm6q" path="res://Player/player_01.tscn" id="4_wkftn"]
+[ext_resource type="PackedScene" uid="uid://c0f0cyrbxe4yl" path="res://tasksks/building.tscn" id="6_m3clv"]
 [ext_resource type="PackedScene" uid="uid://lvrx256scg4q" path="res://Prefabs/flower_task/flower_task.tscn" id="8_4eo0i"]
 [ext_resource type="Script" uid="uid://dnpdijo6k6use" path="res://TaskManager/task_manager.gd" id="9_86ljf"]
 [ext_resource type="TileSet" uid="uid://br5rhwaq4jfm" path="res://Map/maptileset01.tres" id="12_sypgb"]
@@ -98,3 +99,6 @@ position = Vector2(-680, -212)
 
 [node name="Player01" parent="." unique_id=1786162049 instance=ExtResource("4_wkftn")]
 position = Vector2(-90, -26)
+
+[node name="Building" parent="." unique_id=1608765297 instance=ExtResource("6_m3clv")]
+position = Vector2(-744, -526)
