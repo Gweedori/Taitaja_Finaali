@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://c0f0cyrbxe4yl"]
+
+[ext_resource type="Script" uid="uid://7do16ec4kp05" path="res://mvp_test_scene/blank.gd" id="1_cv23p"]
+[ext_resource type="Texture2D" uid="uid://bot1ih18xke1i" path="res://Assets/Pixel_Crawler-Free_Pack/Environment/Structures/Stations/Workbench/Workbench.png" id="2_hf63h"]
+[ext_resource type="PackedScene" uid="uid://cmfkr37py6qp5" path="res://tasksks/task_area.tscn" id="3_hf63h"]
+[ext_resource type="Texture2D" uid="uid://d0exyioycyo4n" path="res://Assets/Exclamationmark.png" id="4_shgm5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_shgm5"]
+atlas = ExtResource("2_hf63h")
+region = Rect2(96, 240, 80, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cv23p"]
+atlas = ExtResource("2_hf63h")
+region = Rect2(96, 64, 80, 48)
+
+[node name="Building" type="Node2D" unique_id=1608765297]
+script = ExtResource("1_cv23p")
+
+[node name="Notools" type="Sprite2D" parent="." unique_id=350071354]
+texture = SubResource("AtlasTexture_shgm5")
+
+[node name="Label" type="Label" parent="." unique_id=723857429]
+offset_left = -53.0
+offset_top = -67.0
+offset_right = 126.0
+offset_bottom = -18.0
+text = "Make woodworking 
+tools together"
+
+[node name="Tolls" type="Sprite2D" parent="." unique_id=744017805]
+visible = false
+texture = SubResource("AtlasTexture_cv23p")
+
+[node name="TaskArea" parent="." unique_id=1144284543 instance=ExtResource("3_hf63h")]
+zone = 2
+coop = true
+
+[node name="Point" type="Sprite2D" parent="." unique_id=1642733418]
+position = Vector2(0, -92)
+texture = ExtResource("4_shgm5")
