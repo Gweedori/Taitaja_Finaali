@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://chr4td6rxbbku"]
+
+[ext_resource type="Script" uid="uid://dsbyto8l6msh" path="res://Map/tree_03.gd" id="1_p7ec6"]
+[ext_resource type="Texture2D" uid="uid://ylgqsyx1wyv6" path="res://Assets/Pixel_Crawler-Free_Pack/Environment/Props/Static/Trees/Model_03/Size_05.png" id="2_qqenh"]
+
+[node name="tree03" type="Node2D" unique_id=1534671516]
+script = ExtResource("1_p7ec6")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1856340248]
+position = Vector2(0, -125)
+texture = ExtResource("2_qqenh")
+region_enabled = true
+region_rect = Rect2(0, 0, 128, 256)

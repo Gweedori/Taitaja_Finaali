@@ -13,15 +13,20 @@ texture = ExtResource("1_cn6ts")
 
 [node name="Player01" parent="." unique_id=1786162049 instance=ExtResource("2_mwlmt")]
 position = Vector2(-32, 0)
+collision_layer = 1
+collision_mask = 1
 
 [node name="TestTasksd" parent="." unique_id=481161883 instance=ExtResource("3_mwlmt")]
 position = Vector2(-108, -110)
 script = null
 
 [node name="TaskArea" parent="TestTasksd" unique_id=1144284543 instance=ExtResource("4_xkjuc")]
+zone = 1
+coop = true
 
 [node name="TestTask2asd" parent="." unique_id=1311139151 instance=ExtResource("3_mwlmt")]
 position = Vector2(69, -107)
 script = null
 
 [node name="TaskArea" parent="TestTask2asd" unique_id=1380948585 instance=ExtResource("4_xkjuc")]
+zone = 3
