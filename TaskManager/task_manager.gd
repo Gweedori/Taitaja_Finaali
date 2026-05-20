@@ -17,7 +17,8 @@ const NATUREPATH_TASK = preload("uid://dimftpdsd0kux")
 func _ready() -> void:
 	#spawn_test_task()
 	spawn_trash_task()
-	
+	#spawn_flower_task()
+	spawn_naturepath_task()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -31,15 +32,15 @@ func spawn_test_task():
 
 func spawn_trash_task():
 	var trash_task = TRASH_TASK.instantiate()
-	trash_task.global_position = trash_task_pos.global_position
+	trash_task.global_position = trash_task_pos.position
 	task_manager.add_child.call_deferred(trash_task)
 	
 func spawn_flower_task():
 	var flower_task = FLOWER_TASK.instantiate()
-	flower_task.global_position = flower_task_pos.global_position
+	flower_task.global_position = flower_task_pos.position
 	task_manager.add_child.call_deferred(flower_task)
 
 func spawn_naturepath_task():
 	var naturepath_task = NATUREPATH_TASK.instantiate()
-	naturepath_task.global_position = naturepath_task_pos.global_position
+	naturepath_task.global_position = naturepath_task_pos.position
 	task_manager.add_child.call_deferred(naturepath_task)

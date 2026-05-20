@@ -20,3 +20,4 @@ func _process(delta: float) -> void:
 func task_done():
 	bad_box.hide()
 	good_box.show()
+	$Exclamation.hide()

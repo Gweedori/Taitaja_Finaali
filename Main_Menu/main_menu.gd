@@ -13,7 +13,7 @@ func _process(delta: float) -> void:
 
 func _on_start_pressed() -> void:
 	AudioManager.menu_select.play()
-	get_tree().change_scene_to_file("res://Level.tscn")
+	get_tree().change_scene_to_file("res://Backstory/backstory.tscn")
 
 
 func _on_options_pressed() -> void:
