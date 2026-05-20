@@ -1,12 +1,13 @@
 [gd_scene format=4 uid="uid://lvrx256scg4q"]
 
-[ext_resource type="Texture2D" uid="uid://b1dwu0re6susg" path="res://Assets/Pixel_Crawler-Free_Pack/Environment/Props/Static/Esoteric.png" id="1_m3ync"]
-[ext_resource type="Texture2D" uid="uid://br2tjp2jf338g" path="res://Assets/Pixel_Crawler-Free_Pack/Environment/Props/Static/Resources.png" id="2_8gv1r"]
-[ext_resource type="Texture2D" uid="uid://cclgqv7hcme78" path="res://Assets/Pixel_Crawler-Free_Pack/Environment/Props/Static/Vegetation.png" id="3_4vrb0"]
-[ext_resource type="PackedScene" uid="uid://cmfkr37py6qp5" path="res://tasksks/task_area.tscn" id="4_2f13k"]
+[ext_resource type="Script" uid="uid://bpkvpwkf353l2" path="res://Prefabs/flower_tas/flower_task.gd" id="1_3bnw7"]
+[ext_resource type="Texture2D" uid="uid://b1dwu0re6susg" path="res://Assets/Pixel_Crawler-Free_Pack/Environment/Props/Static/Esoteric.png" id="2_e1irh"]
+[ext_resource type="Texture2D" uid="uid://br2tjp2jf338g" path="res://Assets/Pixel_Crawler-Free_Pack/Environment/Props/Static/Resources.png" id="3_aobkp"]
+[ext_resource type="Texture2D" uid="uid://cclgqv7hcme78" path="res://Assets/Pixel_Crawler-Free_Pack/Environment/Props/Static/Vegetation.png" id="4_u752u"]
+[ext_resource type="PackedScene" uid="uid://cmfkr37py6qp5" path="res://tasksks/task_area.tscn" id="5_igu4s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ocodk"]
-texture = ExtResource("1_m3ync")
+texture = ExtResource("2_e1irh")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -61,7 +62,7 @@ texture = ExtResource("1_m3ync")
 0:14/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cuuj4"]
-texture = ExtResource("2_8gv1r")
+texture = ExtResource("3_aobkp")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -113,7 +114,7 @@ texture = ExtResource("2_8gv1r")
 1:10/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qpinj"]
-texture = ExtResource("3_4vrb0")
+texture = ExtResource("4_u752u")
 12:26/0 = 0
 11:26/0 = 0
 10:26/0 = 0
@@ -334,12 +335,17 @@ sources/1 = SubResource("TileSetAtlasSource_cuuj4")
 sources/2 = SubResource("TileSetAtlasSource_qpinj")
 
 [node name="FlowerMeadow" type="Node2D" unique_id=1827121484]
+script = ExtResource("1_3bnw7")
 
-[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1219511360]
-tile_map_data = PackedByteArray("AAD+/wAAAgAFAA8AAAABAP7/AgAEAA8AAAAAAAIAAgABABAAAAD8//7/AgAKABEAAAACAAEAAgAGABEAAAD7/wIAAgAGABEAAAD5//7/AgAGABEAAAAEAP7/AgAFAA8AAAADAAQAAgAFAA8AAAD9/wQAAgAFAA8AAAD7/wAAAgABABoAAAAEAAAAAgABABoAAAD+//z/AgABABoAAAAAAAUAAgABABoAAAD7/wMAAgABABoAAAD5/wAAAgAAABoAAAD5/wQAAgAKABoAAAAEAAIAAgAAABoAAAABAPz/AgAKABoAAAD7//z/AgAKABoAAAD7/wUAAgAKABoAAAD4/wIAAgAAABgAAAD///3/AgAAABgAAAD2/wAAAgAAABcAAAD+/wIAAgAAABcAAAD+//7/AgAAABcAAAABAAAAAgAAABcAAAADAPz/AgAAABcAAAAFAPv/AgAAABcAAAD3//3/AgAAABcAAAD+/wYAAgAAABcAAAABAAYAAgAAABcAAAAFAAYAAgACABcAAAACAP3/AgACABcAAAAGAP3/AgACABcAAAAGAAMAAgACABcAAAAHAAEAAgAAABoAAAD+//v/AgAAABoAAAD6//v/AgAAABoAAAD5//z/AgAAABoAAAACAPr/AgAAABoAAAD8//r/AgAAABoAAAAEAAYAAgAAABkAAAD9/wcAAgAAABkAAAACAAAAAgAAABkAAAA=")
+[node name="BadMeadow" type="TileMapLayer" parent="." unique_id=1219511360]
+tile_map_data = PackedByteArray("AAABAP7/AgAEAA8AAAAAAAIAAgABABAAAAD8//7/AgAKABEAAAACAAEAAgAGABEAAAD9/wQAAgAFAA8AAAD7/wAAAgABABoAAAAEAAAAAgABABoAAAAAAAUAAgABABoAAAD5/wAAAgAAABoAAAAEAAIAAgAAABoAAAD4/wIAAgAAABgAAAABAAAAAgAAABcAAAADAPz/AgAAABcAAAD3//3/AgAAABcAAAD+/wYAAgAAABcAAAAFAAYAAgACABcAAAACAP3/AgACABcAAAAGAP3/AgACABcAAAAHAAEAAgAAABoAAAD/////AgAFAA8AAAD7/wMAAgAAAA8AAAD5//3/AgAAAA8AAAAIAP7/AgADAAwAAAAHAAUAAgADAAwAAAD5/wUAAgABABEAAAD7/wEAAgAEABAAAAAEAP7/AgAEABAAAAAEAAUAAgAEABAAAAD3/wAAAgAFABEAAAACAPz/AgAFABEAAAD6//v/AgAFABEAAAD4/wQAAgADABAAAAA=")
 tile_set = SubResource("TileSet_cbib1")
 
-[node name="TaskArea" parent="." unique_id=1144284543 instance=ExtResource("4_2f13k")]
+[node name="GoodMeadow" type="TileMapLayer" parent="." unique_id=1202057314]
+tile_map_data = PackedByteArray("AAD/////AgAFAAkAAAD9/wQAAgAFAAkAAAABAP7/AgAEAAkAAAD7/wEAAgAEAAoAAAD8//7/AgAJAAoAAAACAAEAAgAGAAsAAAAEAAUAAgAEAAoAAAD5/wUAAgAAAAsAAAD3/wAAAgAEAAkAAAD9//z/AgAMAAoAAAAFAP3/AgAMAAoAAAD3/wMAAgAMAAoAAAAAAAQAAgAMAAoAAAAEAAMAAgAMAAoAAAD6//7/AgAMAAoAAAD3//z/AgAGABoAAAD6//v/AgAGABoAAAD5//3/AgAGABoAAAAHAAEAAgAGABoAAAAEAAAAAgAGABoAAAD4/wQAAgAGABoAAAD+/wYAAgAGABoAAAAAAPv/AgAGABoAAAADAP7/AgAGABoAAAAGAPv/AgAGABoAAAD+//r/AgAGABoAAAACAAYAAgAHABgAAAD1/wYAAgAHABgAAAD2//7/AgAHABgAAAACAPr/AgAHABgAAAAGAAMAAgAHABgAAAD+/wEAAgAHABgAAAD//wUAAgAKABcAAAD///3/AgAKABcAAAADAAAAAgAKABcAAAD6/wIAAgAKABcAAAACAP//AgAKABcAAAAHAP//AgAKABcAAAAFAAIAAgAKABcAAAAHAAUAAgAEABoAAAAFAAYAAgAEABoAAAAIAP7/AgAEABoAAAAGAP3/AgAEABoAAAAEAPv/AgAEABoAAAA=")
+tile_set = SubResource("TileSet_cbib1")
+
+[node name="TaskArea" parent="." unique_id=1144284543 instance=ExtResource("5_igu4s")]
 position = Vector2(0, 12)
 scale = Vector2(4, 4)
 zone = 1
