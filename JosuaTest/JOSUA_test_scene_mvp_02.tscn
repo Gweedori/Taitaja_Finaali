@@ -52,3 +52,4 @@ player = 2
 
 [node name="AreaMeters" parent="." unique_id=348987959 instance=ExtResource("4_s8s8w")]
 layout_mode = 1
+script = null
