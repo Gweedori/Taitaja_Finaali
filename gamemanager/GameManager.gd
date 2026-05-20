@@ -4,6 +4,10 @@ extends Node
 @onready var zone2Points = 0
 @onready var zone3Points = 0
 
+@onready var zone1Stage = 1
+@onready var zone2Stage = 1
+@onready var zone3Stage = 1
+
 @onready var treeStage = 1
 @onready var playerWaiting = false
 @onready var waitingPlayernum = 0
