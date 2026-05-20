@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://cx36oqaiqgfhs"]
+
+[ext_resource type="Script" uid="uid://dvv0cys6gqehl" path="res://mvp_test_scene/SplitScreen.gd" id="1_ttc06"]
+[ext_resource type="PackedScene" uid="uid://da56g8dn2dq5m" path="res://JosuaTest/JOSUA_testLevel.tscn" id="2_plrgo"]
+[ext_resource type="PackedScene" uid="uid://dco2xqwgcmm6q" path="res://Player/player_01.tscn" id="3_x1wrw"]
+[ext_resource type="PackedScene" uid="uid://bsow6xl0dd5yk" path="res://Ui/Meters.tscn" id="4_s8s8w"]
+
+[node name="Control" type="Control" unique_id=1661898967]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ttc06")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1669098241]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LeftSubViewportContainer" type="SubViewportContainer" parent="HBoxContainer" unique_id=668182591]
+layout_mode = 2
+size_flags_horizontal = 3
+stretch = true
+
+[node name="LeftSubViewport" type="SubViewport" parent="HBoxContainer/LeftSubViewportContainer" unique_id=1108744773]
+handle_input_locally = false
+canvas_item_default_texture_filter = 0
+size = Vector2i(574, 648)
+render_target_update_mode = 4
+
+[node name="Node2D" parent="HBoxContainer/LeftSubViewportContainer/LeftSubViewport" unique_id=246510384 instance=ExtResource("2_plrgo")]
+
+[node name="RightSubViewportContainer" type="SubViewportContainer" parent="HBoxContainer" unique_id=76144784]
+layout_mode = 2
+size_flags_horizontal = 3
+stretch = true
+
+[node name="RightSubViewport" type="SubViewport" parent="HBoxContainer/RightSubViewportContainer" unique_id=1455983664]
+handle_input_locally = false
+canvas_item_default_texture_filter = 0
+size = Vector2i(574, 648)
+render_target_update_mode = 4
+
+[node name="Player01" parent="HBoxContainer/RightSubViewportContainer/RightSubViewport" unique_id=1786162049 instance=ExtResource("3_x1wrw")]
+position = Vector2(277, 195)
+player = 2
+
+[node name="AreaMeters" parent="." unique_id=348987959 instance=ExtResource("4_s8s8w")]
+layout_mode = 1

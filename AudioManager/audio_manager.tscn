@@ -40,6 +40,7 @@ bus = &"SFX"
 
 [node name="FootStepGrass" type="AudioStreamPlayer" parent="." unique_id=354295497]
 stream = ExtResource("8_vs8pd")
+volume_db = -10.0
 bus = &"SFX"
 
 [node name="BasicAction" type="AudioStreamPlayer" parent="." unique_id=1881553671]

@@ -14,6 +14,7 @@ func _getTaskInfo():
 
 func makeTaskDone():
 	taskDone = true
+	get_parent().task_done()
 	#print("Remember to change makeTaskDone back to true")
 
 func playerJoin():

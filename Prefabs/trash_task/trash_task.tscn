@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://b1dwu0re6susg" path="res://Assets/Pixel_Crawler-Free_Pack/Environment/Props/Static/Esoteric.png" id="1_0npsr"]
 [ext_resource type="Script" uid="uid://bn60m5umjky44" path="res://Prefabs/trash_task/trash_task.gd" id="1_eowk1"]
 [ext_resource type="Texture2D" uid="uid://br2tjp2jf338g" path="res://Assets/Pixel_Crawler-Free_Pack/Environment/Props/Static/Resources.png" id="2_eowk1"]
+[ext_resource type="PackedScene" uid="uid://cmfkr37py6qp5" path="res://tasksks/task_area.tscn" id="4_3vh3o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_35ugg"]
 texture = ExtResource("1_0npsr")
@@ -115,9 +116,6 @@ texture = ExtResource("2_eowk1")
 sources/0 = SubResource("TileSetAtlasSource_35ugg")
 sources/1 = SubResource("TileSetAtlasSource_plady")
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_uv7as"]
-radius = 67.89698
-
 [node name="TrashTask" type="Node2D" unique_id=2126189975]
 script = ExtResource("1_eowk1")
 
@@ -125,9 +123,7 @@ script = ExtResource("1_eowk1")
 tile_map_data = PackedByteArray("AAD+/wMAAAABAAgAAAACAAEAAAABAAgAAAD8/wAAAAABAAgAAAAAAAEAAAAAAAkAAAACAP3/AAAAAAkAAAD9/wEAAAABAAcAAAABAP7/AAABAAcAAAD+//7/AAABAAcAAAAAAAMAAAABAAEAAAABAP//AAABAAEAAAD8/wIAAAABAAEAAAD8////AAABAAEAAAD//wAAAAABAAEAAAD///3/AAABAAEAAAACAAMAAAAAAAwAAAD9////AAAAAAwAAAD7/wEAAQADAAcAAAAEAP//AQADAAcAAAD//wIAAQADAAcAAAD/////AQADAAcAAAD8//7/AQAFAAUAAAACAP//AQAFAAUAAAD//wQAAQAFAAUAAAAAAP7/AQAFAAUAAAD+/wEAAQAEAAMAAAABAAIAAQAFAAMAAAADAAAAAQAFAAIAAAD+////AQAFAAIAAAA=")
 tile_set = SubResource("TileSet_5ceqv")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1465249140]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1027311888]
-shape = SubResource("CircleShape2D_uv7as")
-
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[node name="TaskArea" parent="." unique_id=1144284543 instance=ExtResource("4_3vh3o")]
+position = Vector2(0, 12)
+scale = Vector2(2, 2)
+zone = 1
