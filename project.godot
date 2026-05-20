@@ -11,8 +11,17 @@ config_version=5
 [application]
 
 config/name="Taitaja_Finaali"
+run/main_scene="uid://cnu1d5r77ldjt"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[audio]
+
+buses/default_bus_layout="uid://csbs8ow0nut2g"
+
+[autoload]
+
+AudioManager="*uid://cht5n8sy2sksp"
 
 [input]
 
