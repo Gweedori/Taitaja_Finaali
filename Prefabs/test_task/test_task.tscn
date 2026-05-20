@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bgj4yn7rnrpaf"]
+
+[ext_resource type="Texture2D" uid="uid://meeyrxaavaqr" path="res://icon.svg" id="1_o35hw"]
+[ext_resource type="Script" uid="uid://cogfq6w1wpxao" path="res://Prefabs/test_task/test_task.gd" id="1_rjyg8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rjyg8"]
+size = Vector2(238, 226.5)
+
+[node name="TestTask" type="Node2D" unique_id=1424688683]
+script = ExtResource("1_rjyg8")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=111902646]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=963440150]
+shape = SubResource("RectangleShape2D_rjyg8")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=191203780]
+texture = ExtResource("1_o35hw")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

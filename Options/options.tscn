@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://cceegkaqm2tto"]
+
+[ext_resource type="Theme" uid="uid://mbsg4xqnedxi" path="res://Assets/FlatUI4/kenneyUI-red.tres" id="1_6k1gw"]
+[ext_resource type="Script" uid="uid://dm5ehro7jm0fd" path="res://Options/options.gd" id="1_ooduq"]
+
+[node name="Options" type="Control" unique_id=1619417498]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ooduq")
+
+[node name="Panel" type="Panel" parent="." unique_id=627475108]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -98.5
+offset_top = -120.5
+offset_right = 98.5
+offset_bottom = 162.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_6k1gw")
+
+[node name="OptionsLabel" type="Label" parent="Panel" unique_id=1996063473]
+layout_mode = 0
+offset_right = 197.0
+offset_bottom = 45.0
+text = "Options"
+horizontal_alignment = 1
+
+[node name="SpacerLabel" type="Label" parent="Panel" unique_id=1450573660]
+layout_mode = 0
+offset_top = 49.0
+offset_right = 197.0
+offset_bottom = 66.0
+theme_override_font_sizes/font_size = 12
+
+[node name="MusicLabel" type="Label" parent="Panel" unique_id=160206617]
+layout_mode = 0
+offset_top = 70.0
+offset_right = 197.0
+offset_bottom = 93.0
+theme_override_font_sizes/font_size = 16
+text = "Music"
+horizontal_alignment = 1
+
+[node name="MusicSlider" type="HSlider" parent="Panel" unique_id=1738184287]
+layout_mode = 0
+offset_left = 14.5
+offset_top = 97.0
+offset_right = 177.5
+offset_bottom = 139.0
+max_value = 2.0
+step = 0.1
+value = 1.0
+
+[node name="SFXLabel" type="Label" parent="Panel" unique_id=1070079571]
+layout_mode = 0
+offset_top = 143.0
+offset_right = 197.0
+offset_bottom = 166.0
+theme_override_font_sizes/font_size = 16
+text = "SFX"
+horizontal_alignment = 1
+
+[node name="SFXSlider" type="HSlider" parent="Panel" unique_id=401235218]
+layout_mode = 0
+offset_left = 14.5
+offset_top = 170.0
+offset_right = 177.5
+offset_bottom = 212.0
+max_value = 2.0
+step = 0.1
+value = 1.0
+
+[node name="Back" type="Button" parent="Panel" unique_id=706232110]
+layout_mode = 0
+offset_left = 14.5
+offset_top = 223.5
+offset_right = 177.5
+offset_bottom = 270.751
+theme_override_font_sizes/font_size = 16
+text = "Back to menu"
+
+[connection signal="drag_ended" from="Panel/MusicSlider" to="." method="_on_music_slider_drag_ended"]
+[connection signal="value_changed" from="Panel/MusicSlider" to="." method="_on_music_slider_value_changed"]
+[connection signal="drag_ended" from="Panel/SFXSlider" to="." method="_on_sfx_slider_drag_ended"]
+[connection signal="value_changed" from="Panel/SFXSlider" to="." method="_on_sfx_slider_value_changed"]
+[connection signal="pressed" from="Panel/Back" to="." method="_on_back_pressed"]

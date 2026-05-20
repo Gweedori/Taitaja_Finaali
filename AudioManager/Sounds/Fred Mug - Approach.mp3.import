@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c1lxbgc7xdji3"
+path="res://.godot/imported/Fred Mug - Approach.mp3-b6975ccce47f583ae725b52bd4d6f88a.mp3str"
+
+[deps]
+
+source_file="res://AudioManager/Sounds/Fred Mug - Approach.mp3"
+dest_files=["res://.godot/imported/Fred Mug - Approach.mp3-b6975ccce47f583ae725b52bd4d6f88a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

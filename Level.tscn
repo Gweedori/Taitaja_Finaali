@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://d1hfp5yvmiuod" path="res://Assets/Pixel_Crawler-Free_Pack/Environment/Props/Static/Trees/Model_02/Size_05.png" id="5_ofirr"]
 [ext_resource type="Texture2D" uid="uid://cclgqv7hcme78" path="res://Assets/Pixel_Crawler-Free_Pack/Environment/Props/Static/Vegetation.png" id="6_d6u53"]
 [ext_resource type="Texture2D" uid="uid://d3ilvxu71l1pa" path="res://Assets/Pixel_Crawler-Free_Pack/Environment/Props/Static/Trees/Model_01/Size_04.png" id="7_sypgb"]
+[ext_resource type="Script" uid="uid://dnpdijo6k6use" path="res://TaskManager/task_manager.gd" id="9_86ljf"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_dn5x0"]
 tile_data = PackedInt32Array(0, 917504, 2, 65536, 917504, 2, 131072, 917504, 2, 1, 786432, 10, 65537, 786432, 10, 131073, 786432, 10, 2, 655360, 2, 65538, 655360, 2, 131074, 655360, 2)
@@ -978,3 +979,9 @@ shape = SubResource("RectangleShape2D_3ywx5")
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D" unique_id=1058228938]
 position = Vector2(936, -805)
 shape = SubResource("RectangleShape2D_ofirr")
+
+[node name="TaskManager" type="Node2D" parent="." unique_id=2121627147]
+script = ExtResource("9_86ljf")
+
+[node name="test_task_pos" type="Marker2D" parent="TaskManager" unique_id=228699558]
+position = Vector2(554, 195)
