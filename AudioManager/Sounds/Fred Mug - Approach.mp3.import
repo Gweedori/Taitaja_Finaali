@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/Fred Mug - Approach.mp3-b6975ccce47f583ae725b
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0
