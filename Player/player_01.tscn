@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cpy0fr0y4trtb" path="res://Player/player_01.gd" id="1_lp4j5"]
 [ext_resource type="Texture2D" uid="uid://meeyrxaavaqr" path="res://icon.svg" id="2_xagy1"]
+[ext_resource type="PackedScene" uid="uid://bpyhho0ekabdi" path="res://Ui/task_minigame_02.tscn" id="3_ccih5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xagy1"]
 radius = 43.011627
@@ -19,3 +20,7 @@ texture = ExtResource("2_xagy1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea" unique_id=1110594787]
 shape = SubResource("CircleShape2D_xagy1")
+
+[node name="TaskMinigame02" parent="." unique_id=1849091798 instance=ExtResource("3_ccih5")]
+visible = false
+position = Vector2(-257, -129)

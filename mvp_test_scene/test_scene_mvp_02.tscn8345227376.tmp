@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://dvv0cys6gqehl" path="res://mvp_test_scene/SplitScreen.gd" id="1_0g6c8"]
 [ext_resource type="PackedScene" uid="uid://bm5cayyu5755m" path="res://mvp_test_scene/test_scene_mvp_01.tscn" id="1_gbtpl"]
 [ext_resource type="PackedScene" uid="uid://dco2xqwgcmm6q" path="res://Player/player_01.tscn" id="3_1mkob"]
-[ext_resource type="PackedScene" uid="uid://bsow6xl0dd5yk" path="res://Ui/Meters.tscn" id="4_xllnj"]
 
 [node name="Control" type="Control" unique_id=1661898967]
 layout_mode = 3
@@ -46,6 +45,3 @@ render_target_update_mode = 4
 
 [node name="Player01" parent="HBoxContainer/RightSubViewportContainer/RightSubViewport" unique_id=1786162049 instance=ExtResource("3_1mkob")]
 player = 2
-
-[node name="AreaMeters" parent="." unique_id=348987959 instance=ExtResource("4_xllnj")]
-layout_mode = 1
