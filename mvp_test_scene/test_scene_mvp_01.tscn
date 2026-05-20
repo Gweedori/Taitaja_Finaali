@@ -13,6 +13,8 @@ texture = ExtResource("1_cn6ts")
 
 [node name="Player01" parent="." unique_id=1786162049 instance=ExtResource("2_mwlmt")]
 position = Vector2(-32, 0)
+collision_layer = 1
+collision_mask = 1
 
 [node name="TestTasksd" parent="." unique_id=481161883 instance=ExtResource("3_mwlmt")]
 position = Vector2(-108, -110)
